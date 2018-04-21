@@ -43,7 +43,7 @@ class ChanganIntegration(Integration): #pylint: disable=too-few-public-methods
             requests.put('{}api/v1/devices'.format(self.url), json=add_client_data, verify=False)
         except Exception as exception: #pylint: disable=broad-except
             print(exception)
-    '''
+    ''' #pylint: disable=pointless-string-statement
 
     def handle_target_name_change(self, event_data):
         """
@@ -63,7 +63,7 @@ class ChanganIntegration(Integration): #pylint: disable=too-few-public-methods
         except Exception as exception: #pylint: disable=broad-except
             print(exception)
 
-    def handle_change_facts(self, event_data, **kwargs):
+    def handle_change_facts(self, event_data, **kwargs): #pylint: disable=unused-argument
         """
         nothing right now
         """
